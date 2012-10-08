@@ -1,0 +1,18 @@
+#!/bin/bash
+if [ ! -n "$1" ]
+    then
+    echo "****** Invalid Arguments *******"
+    echo "Usage: Search for a string."
+    exit 0
+fi
+search_string=$1
+echo -e ''"\033[1m************** :: Search Results for ${search_string} :: ************* \033[0m"
+find . -type f |egrep -v '\.(svn|png|jpg|jpeg|o|git|so|class|elc|rbx|rbc|a|bundle|dylib)'|while read x;
+#for x in `find . -type f |egrep -v '\.(svn|png|jpg|jpeg|o|git|so)'`
+do
+    if [ `egrep -c -e "$search_string" "$x"` -ne 0 ]
+    then
+	echo -e "\033[1m ------- :: $x :: ----------- \033[0m"
+        egrep -n -e "$search_string" "${x}" --color=always -C 1
+    fi
+done

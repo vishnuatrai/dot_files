@@ -1,0 +1,335 @@
+#!/usr/bin/env ruby
+require "rubygems"
+require "rake"
+require "rake/tasklib"
+require "colored"
+require "fileutils"
+begin
+  require "mysql"
+rescue LoadError
+end
+
+require "grit"
+
+class Object
+  def blank?
+    respond_to?(:empty?) ? empty? : !self
+  end
+
+  # An object is present if it's not blank.
+  def present?
+    !blank?
+  end
+
+  def presence
+    self if present?
+  end
+end
+
+class NilClass #:nodoc:
+  def blank?
+    true
+  end
+end
+
+class FalseClass #:nodoc:
+  def blank?
+    true
+  end
+end
+
+class TrueClass #:nodoc:
+  def blank?
+    false
+  end
+end
+
+class Array #:nodoc:
+  alias_method :blank?, :empty?
+end
+
+class Hash #:nodoc:
+  alias_method :blank?, :empty?
+end
+
+class String #:nodoc:
+  def blank?
+    self !~ /\S/
+  end
+end
+
+class Numeric #:nodoc:
+  def blank?
+    false
+  end
+end
+
+include FileUtils
+
+Rake.application.init("sake")
+
+desc "Push current branch"
+task :gp do
+  branch_name = @git_help.current_branch
+  puts "Pushing branch #{branch_name}"
+  system("git push origin #{branch_name}")
+end
+
+desc "Force push current branch"
+task :gpf do
+  branch_name = @git_help.current_branch
+  puts "Force pushing branch #{branch_name}"
+  system("git push origin #{branch_name} --force")
+end
+
+desc "Merge remote of current with current branch"
+task :gm do
+  branch_name = @git_help.current_branch
+  puts "Merging origin/#{branch_name} with #{branch_name}"
+  system("git merge origin/#{branch_name}")
+end
+
+desc "Rebase remote of current with current branch"
+task :gb do
+  branch_name = @git_help.current_branch
+  puts "Rebasing origin/#{branch_name} with #{branch_name}"
+  system("git rebase origin/#{branch_name}")
+end
+
+desc "Show diff"
+task :gd do
+  system("git diff")
+end
+
+desc "Do hard reset"
+task :grst do
+  system("git reset --hard HEAD")
+end
+
+desc "Clone code from one of the CRRC repos"
+task :gcs do
+  project_name = ENV['project']
+  system("git clone git@code.crrc.ca:#{project_name}.git")
+end
+
+desc "Creating a tracking local branch"
+task :gct do
+  branch_name = ENV['branch']
+  if(branch_name.blank?)
+    abort("Argument branch=".red+"<branch_name>".green)
+  else
+    system("git checkout --track -b #{branch_name} origin/#{branch_name}")
+  end
+end
+
+desc "Creating local branch for all branches"
+task :create_branch do
+  repo = Grit::Repo.new(".")
+  local_branches = repo.branches.collect { |x| x.name }
+  puts local_branches.join(",")
+  remote_origin_branches = repo.remotes.collect { |x| x.name =~ /^origin\/(.+)/ ? $1 : nil }.compact
+  puts "********** Remote origin branches are **********"
+  puts remote_origin_branches.join(",")
+  remote_origin_branches.each do |branch_name|
+    if branch_name != 'HEAD' && !local_branches.include?(branch_name)
+      puts "********** Creating branch #{branch_name}"
+      system("git checkout --track -b #{branch_name} origin/#{branch_name}")
+    elsif(branch_name != 'HEAD' && local_branches.include?(branch_name))
+      puts "########## Rebasing branch #{branch_name} with origin/#{branch_name}"
+      system("git checkout #{branch_name}")
+      system("git rebase origin/#{branch_name}")
+    end
+  end
+end
+
+desc "drop a table from particular db"
+task :drop_table do
+  db = ENV['db']
+  table_name = ENV['table']
+
+  username = ENV['user'] || 'root'
+  password = ENV['password'] || ''
+  host = ENV['host'] || 'localhost'
+
+  if !db.blank? && !table_name.blank?
+    puts "Going to drop #{table_name} from #{db}"
+    db_util = Sake::Database.new()
+    db_util.delete_table(db,table_name,username,password,host)
+  else
+    abort("Please supply db and table to delete")
+  end
+end
+
+
+desc "Update all Solaro related repos"
+task :slu do
+  solaro_dir = File.join(ENV['HOME'],'checkout','solaro')
+  cd(solaro_dir) { system("git fetch") }
+  securo_admin_dir = File.join(ENV['HOME'],'checkout','securo_admin')
+  cd(securo_admin_dir) { system("git fetch") }
+  payment_dir = File.join(ENV['HOME'],'checkout','securo_payment_middleware')
+  cd(payment_dir) { system("git fetch") }
+  solaro_revision_dir = File.join(ENV['HOME'],'solaro_revision')
+  cd(solaro_revision_dir) { system("git fetch") }
+  gitosis_dir = File.join(ENV['HOME'],'gitosis-admin')
+  cd(gitosis_dir) { system("git fetch") }
+end
+
+desc "Globally available task list"
+task :default do
+  Rake.application.tasks.each do |task|
+    puts sprintf("%-25s : %s",task.name.bold.red,task.comment || "runs #{task.name}".blue)
+  end
+end
+
+desc "Update solaro"
+task :sl do
+  solaro_dir = File.join(ENV['HOME'],'checkout','solaro')
+  cd(solaro_dir) do
+    system("git fetch")
+    Rake.application.invoke_task("gm")
+  end
+end
+
+desc "Update rails and arel"
+task :ru do
+  rails_dir = File.join(ENV['HOME'],'checkout','rails')
+  cd(rails_dir) do
+    system("git fetch")
+    system("git fetch upstream")
+    system("git rebase upstream/master")
+  end
+
+  arel_dir = File.join(ENV['HOME'],'checkout','arel')
+  cd(arel_dir) do
+    system("git fetch")
+    Rake.application.invoke_task('gb')
+  end
+
+  rack_dir = File.join(ENV['HOME'],'checkout','rack')
+  cd(rack_dir) do
+    system("git fetch")
+    Rake.application.invoke_task('gb')
+  end
+end
+
+desc "truncate db"
+task :dbt do
+  db = ENV['db']
+  username = ENV['user'] || 'root'
+  password = ENV['password'] || ''
+  host = ENV['host'] || 'localhost'
+
+  if not db.blank?
+    db_util = Sake::Database.new()
+    db_util.truncate_db(db,username,password,host)
+  else
+    abort("Please supply db name to truncate")
+  end
+end
+
+desc "Run ruby"
+task :run_ruby do
+  ruby "~/checkout/solaro/sandbox/benchmark_find_select.rb"
+end
+
+desc 'delete files'
+task :df do
+  folder = ENV['dir']
+  pattern = ENV['pattern'] || 'rb'
+  count = (ENV['count'] || 12).to_i
+  Dir["#{folder}/**/*.#{pattern}"].each_with_index do |file,index|
+    FileUtils.rm(file) if index > count
+  end
+end
+
+desc "sandbox db"
+task :box_db do
+  db = ENV['db'] || 'sandbox'
+  username = ENV['user'] || 'root'
+  password = ENV['password'] || ''
+  host = ENV['host'] || 'localhost'
+
+  file =<<-EOD
+common: &common
+  adapter: mysql
+  reconnect: false
+  pool: 5
+  host: #{host}
+  username: #{username}
+  password: #{password}
+
+development:
+  <<: *common
+  database: #{db}_development
+
+test:
+  <<: *common
+  database: #{db}_test
+
+production:
+  <<: *common
+  database: #{db}_production
+  EOD
+
+  current_dir = Dir.pwd.split("/").last
+  if(current_dir == 'config')
+    File.open("database.yml","w") { |fl| fl.write(file)}
+  else
+    cd("config") do
+      File.open("database.yml","w") { |fl| fl.write(file)}
+    end
+  end
+  ['production','development','test'].each do |db_env|
+    db_name = "#{db}_#{db_env}"
+    puts "Going to recreate #{db_name}"
+    system("mysqladmin -h #{host} -u #{username} -f drop #{db_name}")
+    system("mysqladmin -h #{host} -u #{username} -f create #{db_name}")
+  end
+end
+
+
+module Sake
+  class Git
+    def current_branch
+      cmd_output = `git symbolic-ref HEAD`
+      branch_name = cmd_output.strip.split("/")[-1]
+      branch_name
+    end
+  end
+  class Database
+    def truncate_db(db,username = 'root',password = '', host = 'localhost')
+      puts "Truncating Database :  ".bold + db.red.bold
+      puts "** Press enter to continue **".green.bold
+
+      STDIN.getc
+      begin
+        connection = Mysql.connect(host,username,password,db)
+        result = connection.real_query("show tables")
+        tables = []
+        result.each_hash { |table| tables << table.values.first }
+        connection.real_query("set foreign_key_checks = 0;")
+        tables.each do |table|
+          puts "Truncating #{table}"
+          connection.real_query("truncate #{table}")
+        end
+        connection.real_query("set foreign_key_checks = 1;")
+      ensure
+        connection.close()
+      end
+    end
+
+    def delete_table(db,table_name,username = 'root',password = '',host = 'localhost')
+      begin
+        connection = Mysql.connect(host,username,password,db)
+        result = connection.real_query("drop table #{table_name}")
+      ensure
+        connection.close()
+      end
+    end
+  end
+
+end
+@git_help = Sake::Git.new()
+
+Rake.application.top_level()

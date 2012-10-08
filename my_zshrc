@@ -1,0 +1,178 @@
+setopt correct
+
+# Use Emacs keybinds
+bindkey -e
+
+PS1='%2~> '
+
+setopt prompt_subst
+
+# git theming default: Variables for theming the git info prompt
+ZSH_THEME_GIT_PROMPT_PREFIX="git:("         # Prefix at the very beginning of the prompt, before the branch name
+ZSH_THEME_GIT_PROMPT_SUFFIX=")"             # At the very end of the prompt
+
+autoload colors zsh/terminfo
+    if [[ "$terminfo[colors]" -ge 8 ]]; then
+	colors
+    fi
+
+for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
+    eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
+    eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
+    (( count = $count + 1 ))
+done
+PR_NO_COLOUR="%{$terminfo[sgr0]%}"
+
+
+function precmd() {
+  head_info=$(git symbolic-ref HEAD 2> /dev/null)
+  # rvm_use=$(rvm info|egrep -C 1 'homes'|grep 'gem'|cut -d\: -f 2|cut -d\" -f 2 )
+  # 
+  # if [[ $rvm_use =~ 'not set' ]]; then
+  #   rvm_flag='system'
+  # else
+  #   rvm_flag=$rvm_use[(ws:/:)-1]
+  # fi
+
+  rvm_prompt_info=$(~/.rvm/bin/rvm-prompt 2> /dev/null)
+  
+  # if [[ $rvm_prompt_info =~ ' ' ]]; then
+  #   rvm_flag='system'
+  # else
+    rvm_flag=$rvm_prompt_info
+  # fi
+  
+  RPROMPT='$PR_RED$rvm_flag$PR_NO_COLOUR'
+  if [[ $head_info =~ '^refs*' ]]; then
+    branch_name=$head_info[(ws:/:)-1]
+    output=$(git diff-files --exit-code --quiet)
+    if [[ $? == 0 ]]; then
+      PROMPT='%2~ $PR_RED$ZSH_THEME_GIT_PROMPT_PREFIX$PR_NO_COLOUR$PR_GREEN$branch_name$PR_NO_COLOUR$PR_RED$ZSH_THEME_GIT_PROMPT_SUFFIX$PR_NO_COLOUR$PR_CYAN>$PR_NO_COLOUR '
+    else
+      PROMPT='%2~ $PR_RED$ZSH_THEME_GIT_PROMPT_PREFIX$PR_NO_COLOUR$PR_GREEN$branch_name$PR_NO_COLOUR$PR_RED$ZSH_THEME_GIT_PROMPT_SUFFIX$PR_NO_COLOUR$PR_MAGENTA*$PR_NO_COLOUR '
+    fi
+  else
+    PROMPT='%2~~>'
+  fi
+}
+
+#history stuff
+## Command history configuration
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt hist_ignore_dups # ignore duplication command history list
+setopt share_history # share command history data
+
+setopt hist_verify
+setopt inc_append_history
+setopt extended_history
+setopt hist_expire_dups_first
+
+# completion related stuff
+## fixme - the load process here seems a bit bizarre
+
+setopt noautomenu
+setopt complete_in_word
+setopt always_to_end
+
+unsetopt flowcontrol
+
+WORDCHARS=''
+
+autoload -U compinit
+compinit
+
+zmodload -i zsh/complist
+
+## case-insensitive (all),partial-word and then substring completion
+if [ "x$CASE_SENSITIVE" = "xtrue" ]; then
+  zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+  unset CASE_SENSITIVE
+else
+  zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+fi
+
+zstyle ':completion:*' list-colors ''
+
+unsetopt MENU_COMPLETE
+#setopt AUTO_MENU
+
+# should this be in keybindings?
+bindkey -M menuselect '^o' accept-and-infer-next-history
+
+zstyle ':completion:*:*:*:*:*' menu yes select
+# zstyle ':completion:*:*:*:*:processes' force-list always
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm -w -w"
+
+# Load known hosts file for auto-completion with ssh and scp commands
+if [ -f ~/.ssh/known_hosts ]; then
+  zstyle ':completion:*' hosts $( sed 's/[, ].*$//' $HOME/.ssh/known_hosts )
+  zstyle ':completion:*:*:(ssh|scp):*:*' hosts `sed 's/^\([^ ,]*\).*$/\1/' ~/.ssh/known_hosts`
+fi
+#end of completion related stuff
+
+# Aliases
+alias g='git'
+alias gst='git status'
+alias gl='git pull'
+alias gup='git fetch && git rebase'
+alias gp='git push'
+alias gd='git diff | mate'
+alias gdv='git diff -w "$@" | vim -R -'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gcount='git shortlog -sn'
+alias gcp='git cherry-pick'
+alias grst='git reset --hard HEAD'
+alias gf="git fetch"
+alias gsi="git submodule init"
+alias gsu="git submodule update"
+alias grh="git reset --hard"
+alias s="sake"
+alias be="bundle exec"
+
+alias psr="ps axu|grep ruby"
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias r="rake"
+alias screen="screen -h 5000"
+alias emacs="open -a Emacs.app"
+alias em="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no-wait"
+alias cl="cd ~/apps/CyncAbl-R3"
+alias rls="cd ~/apps/rails"
+alias ls="ls -G"
+export EDITOR="vim"
+
+
+
+#export PATH=/opt/ree/bin:/opt/git/bin:/opt/local/bin:/opt/local/sbin:$HOME/bin:$PATH
+
+export PATH=/usr/local/bin:$HOME/bin:$PATH
+alias ru='ps -ef | grep ruby'
+
+export CC=/usr/bin/gcc-4.5
+export LC_CTYPE=en_US.UTF-8 export LC_ALL=en_US.UTF-8
+
+
+#export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/usr/local/Cellar/mysql/5.1.55/lib"
+#rvm_archflags="-arch i386"
+
+#export JRUBY_OPTS=--1.9
+
+# Oracle specific
+export DYLD_LIBRARY_PATH="/usr/local/oracle/instantclient_10_2"
+export SQLPATH="/usr/local/oracle/instantclient_10_2"
+export TNS_ADMIN="/usr/local/oracle/network/admin"
+export NLS_LANG="AMERICAN_AMERICA.UTF8"
+export PATH=$PATH:$DYLD_LIBRARY_PATH
+
+source ~/apps/auto-rake/auto_rake.sh
+
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+PATH=$PATH:$HOME/.rvm/bin

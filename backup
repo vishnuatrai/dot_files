@@ -1,0 +1,75 @@
+#!/usr/bin/env ruby
+
+require "rubygems"
+require "configatron"
+require "yaml"
+require "fileutils"
+
+class Backup
+  include FileUtils
+  attr_accessor :config, :config_dir
+  def initialize
+    @config_dir = File.join(ENV['HOME'],'.backup')
+    config_hash = YAML.load_file(File.join(config_dir,"backup.yml"))
+    configatron.configure_from_hash(config_hash)
+  end
+
+  def run_command(arg)
+    command = arg.first
+    unless can_backup?
+      puts "Warning - backup target is missing and cant run backups"
+      exit(1)
+    end
+    case command
+    when "archive"
+      archive_folders()
+    else
+      backup_all()
+      archive_folders()
+    end
+  end
+
+  def can_backup?
+    File.directory?(configatron.target)
+  end
+
+  def can_archive?
+    File.directory?(configatron.archive.source)
+  end
+
+  def archive_folders
+    return unless can_archive?
+    system("rsync #{rsync_command_options} #{configatron.archive.source} #{configatron.target}")
+    keep_dirs = configatron.archive.exclude.split(",")
+    keep_dirs.each do |dir|
+      tobe_deleted = File.join(configatron.archive.source,dir)
+      puts "Going to delete all contents of #{tobe_deleted}"
+      rm_r Dir.glob("#{tobe_deleted}/*")
+    end
+  end
+
+  def rsync_command_options
+    "-avl --inplace --stats --progress"
+  end
+
+  def backup_has_exclude?
+    File.exists?(backup_exclude)
+  end
+
+  def backup_exclude
+    File.join(config_dir,"exclude.txt")
+  end
+
+  def backup_all
+    if backup_has_exclude?
+      system("rsync #{rsync_command_options} --delete --exclude-from '#{backup_exclude}' #{configatron.backup.source} #{configatron.target}")
+    else
+      system("rsync #{rsync_command_options} --delete #{configatron.backup.source} #{configatron.target}")
+    end
+  end
+end
+
+if __FILE__ == $0
+  b = Backup.new()
+  b.run_command(ARGV)
+end
