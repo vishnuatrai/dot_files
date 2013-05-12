@@ -144,7 +144,7 @@ alias r="rake"
 alias screen="screen -h 5000"
 alias emacs="open -a Emacs.app"
 alias em="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no-wait"
-alias cl="cd ~/apps/CyncAbl-R3"
+alias cl="cd ~/apps/idexcel/CyncAbl-R3"
 alias rls="cd ~/apps/rails"
 alias ls="ls -G"
 export EDITOR="vim"
@@ -174,5 +174,5 @@ export PATH=$PATH:$DYLD_LIBRARY_PATH
 
 source ~/apps/auto-rake/auto_rake.sh
 
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin
