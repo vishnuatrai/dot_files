@@ -4,12 +4,15 @@
 
 * Create couple of symbolic links:
 
-  $ ln -s ~/dot_files/my_zshrc ~/.zshrc
-  $ ln -s ~/dot_files/irbrc ~/.irbrc
-  $ ln -s ~/dot_files/gitconfig ~/.gitconfig
-  $ mkdir ~/bin (if bin directory doesn't exist)
-  $ ln -s ~/sake ~/bin/sake
-  $ ln -s ~/dot_files/screenrc ~/.screenrc
+  $ ln -s ~/dot_files/my_zshrc ~/.zshrc  
+  $ ln -s ~/dot_files/irbrc ~/.irbrc  
+  $ ln -s ~/dot_files/gitconfig ~/.gitconfig  
+  $ mkdir ~/bin (if bin directory doesn't exist)  
+  $ ln -s ~/sake ~/bin/sake  
+  $ ln -s ~/dot_files/screenrc ~/.screenrc  
+  $ ln -s src/dot_files/vimrc ~/.vimrc
+  
+  
 
 * Modify ~/dot_files/my_zshrc 
   
