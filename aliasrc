@@ -1,0 +1,53 @@
+# ruby/rails
+alias bes="bundle exec rspec"
+alias ber="bundle exec rake"
+alias bake="bundle exec rake"
+alias be="bundle exec"
+
+
+alias gbr="git remote prune origin && git branch -r"
+
+# filesystem
+alias ..="cd ../"
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias o=$EDITOR
+alias dotf="cd $HOME/.dotfiles"
+alias ls="ls -G"
+alias mkdir="mkdir -p"
+alias s="sake"
+# services
+alias nick="mplayer ~/Music/Theme\ Music/528491.wav > /dev/null 2>&1"
+
+#git
+alias g="git"
+alias gst='git status'
+alias gl='git pull'
+alias gup='git fetch && git rebase'
+alias gp='git push'
+alias gd='git diff | mate'
+alias gdv='git diff -w "$@" | vim -R -'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gcount='git shortlog -sn'
+alias gcp='git cherry-pick'
+alias grst='git reset --hard HEAD'
+alias gf="git fetch"
+alias s="sake"
+alias be="bundle exec"
+
+alias psr="ps axu|grep ruby"
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias r="rake"
+alias screen="screen -h 5000"
+alias emacs="open -a Emacs.app"
+alias em="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no-wait"
+alias sl="cd ~/crri/solaro/"
+alias sca="cd ~/projects/securo_admin/"
+alias ls="ls -G"
+
+# misc.
+alias timestamp="date +%Y%m%d%H%M%S"
