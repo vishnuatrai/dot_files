@@ -140,6 +140,7 @@ export PATH=$PATH:$DYLD_LIBRARY_PATH
 
 source ~/apps/auto-rake/auto_rake.sh
 source $HOME/.aliasrc
+source "$HOME/.zsh.local"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin
