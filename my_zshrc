@@ -138,7 +138,6 @@ export TNS_ADMIN="/usr/local/oracle/network/admin"
 export NLS_LANG="AMERICAN_AMERICA.UTF8"
 export PATH=$PATH:$DYLD_LIBRARY_PATH
 
-source ~/apps/auto-rake/auto_rake.sh
 source $HOME/.aliasrc
 source "$HOME/.zsh.local"
 
