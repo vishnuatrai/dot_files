@@ -57,6 +57,8 @@ Bundle 'xenoterracide/html.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'shemerey/vim-peepopen'
+Bundle 'jceb/vim-orgmode'
+
 filetype plugin indent on
 
 augroup vimrcEx
