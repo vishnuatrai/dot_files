@@ -139,7 +139,9 @@ export NLS_LANG="AMERICAN_AMERICA.UTF8"
 export PATH=$PATH:$DYLD_LIBRARY_PATH
 
 source $HOME/.aliasrc
+#source "$HOME//src/dot_files/zshrc"
 source "$HOME/.zsh.local"
+
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin

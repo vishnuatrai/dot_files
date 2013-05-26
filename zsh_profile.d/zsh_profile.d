@@ -1,0 +1,1 @@
+/Users/rashmiyadav/clone/dotfiles/zsh_profile.d
