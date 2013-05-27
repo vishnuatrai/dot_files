@@ -102,8 +102,6 @@ if [ -f ~/.ssh/known_hosts ]; then
 fi
 #end of completion related stuff
 
-export EDITOR="vim"
-
 #export PATH=/opt/ree/bin:/opt/git/bin:/opt/local/bin:/opt/local/sbin:$HOME/bin:$PATH
 
 export PATH=/usr/local/bin:$HOME/bin:$PATH
@@ -129,6 +127,7 @@ source $HOME/.aliasrc
 #source "$HOME//src/dot_files/zshrc"
 source "$HOME/.zsh.local"
 source "$HOME/.zsh_profile.d/history.zsh"
+source "$HOME/.zsh_profile.d/edit.zsh"
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
