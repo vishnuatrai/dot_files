@@ -35,8 +35,10 @@ alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 alias grst='git reset --hard HEAD'
 alias gf="git fetch"
+alias gsi="git submodule init"
+alias gsu="git submodule update"
+
 alias s="sake"
-alias be="bundle exec"
 
 alias psr="ps axu|grep ruby"
 alias ..2="cd ../.."

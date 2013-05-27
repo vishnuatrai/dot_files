@@ -1,49 +1,33 @@
 setopt correct
 
 # Use Emacs keybinds
-bindkey -e
+# bindkey -e
 
-PS1='%2~> '
+export REMOTE_GEM_CACHE_PATH=$HOME/.remote-gem-cache
+export ZSH_HISTORY_PATH=$HOME/.zsh_history
+export HOMEBREW_SEARCH_CACHE_PATH=$HOME/.homebrew-search-cache
 
-# git theming default: Variables for theming the git info prompt
-ZSH_THEME_GIT_PROMPT_PREFIX="git:("         # Prefix at the very beginning of the prompt, before the branch name
-ZSH_THEME_GIT_PROMPT_SUFFIX=")"             # At the very end of the prompt
+# Oracle specific
+#export DYLD_LIBRARY_PATH="/usr/local/oracle/instantclient_10_2"
+#export SQLPATH="/usr/local/oracle/instantclient_10_2"
+#export TNS_ADMIN="/usr/local/oracle/network/admin"
+#export NLS_LANG="AMERICAN_AMERICA.UTF8"
 
-for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
-    eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
-    eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
-    (( count = $count + 1 ))
+
+#export PATH=$PATH:$DYLD_LIBRARY_PATH
+#export PATH=$PATH:$HOME/bin
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+
+for zsh_source in $HOME/.zsh_profile.d/*.zsh; do
+  source $zsh_source
 done
-PR_NO_COLOUR="%{$terminfo[sgr0]%}"
-
-
-function precmd() {
-  head_info=$(git symbolic-ref HEAD 2> /dev/null)
-  rvm_prompt_info=$(~/.rvm/bin/rvm-prompt 2> /dev/null)
-  rvm_flag=$rvm_prompt_info
-  RPROMPT='$PR_RED$rvm_flag$PR_NO_COLOUR'
-  if [[ $head_info =~ '^refs*' ]]; then
-    branch_name=$head_info[(ws:/:)-1]
-    output=$(git diff-files --exit-code --quiet)
-    if [[ $? == 0 ]]; then
-      PROMPT='%2~ $PR_RED$ZSH_THEME_GIT_PROMPT_PREFIX$PR_NO_COLOUR$PR_GREEN$branch_name$PR_NO_COLOUR$PR_RED$ZSH_THEME_GIT_PROMPT_SUFFIX$PR_NO_COLOUR$PR_CYAN>$PR_NO_COLOUR '
-    else
-      PROMPT='%2~ $PR_RED$ZSH_THEME_GIT_PROMPT_PREFIX$PR_NO_COLOUR$PR_GREEN$branch_name$PR_NO_COLOUR$PR_RED$ZSH_THEME_GIT_PROMPT_SUFFIX$PR_NO_COLOUR$PR_MAGENTA*$PR_NO_COLOUR '
-    fi
-  else
-    PROMPT='%2~~>'
-  fi
-}
-
 
 source $HOME/.aliasrc
-#source "$HOME//src/dot_files/zshrc"
 source "$HOME/.zsh.local"
-source "$HOME/.zsh_profile.d/history.zsh"
-source "$HOME/.zsh_profile.d/edit.zsh"
-source "$HOME/.zsh_profile.d/utilities.zsh"
-source "$HOME/.zsh_profile.d/completion.zsh"
-source "$HOME/.zsh_profile.d/colors.zsh"
+
+current
 
 export PATH=/usr/local/bin:$PATH:$HOME/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

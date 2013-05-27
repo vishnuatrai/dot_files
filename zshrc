@@ -1,3 +1,8 @@
+setopt correct
+
+# Use Emacs keybinds
+# bindkey -e
+
 export REMOTE_GEM_CACHE_PATH=$HOME/.remote-gem-cache
 export ZSH_HISTORY_PATH=$HOME/.zsh_history
 export HOMEBREW_SEARCH_CACHE_PATH=$HOME/.homebrew-search-cache
@@ -14,12 +19,16 @@ export HOMEBREW_SEARCH_CACHE_PATH=$HOME/.homebrew-search-cache
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-source $HOME/.aliasrc
 
 for zsh_source in $HOME/.zsh_profile.d/*.zsh; do
   source $zsh_source
 done
 
+source $HOME/.aliasrc
+source "$HOME/.zsh.local"
+
 current
 
 export PATH=/usr/local/bin:$PATH:$HOME/bin
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+PATH=$PATH:$HOME/.rvm/bin
