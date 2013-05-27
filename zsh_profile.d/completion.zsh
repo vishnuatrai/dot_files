@@ -31,8 +31,8 @@ compdef _cuc cuc
 _rake_does_task_list_need_generating() {
   if [[ ! -f .rake_tasks ]]; then return 0;
   else
-    accurate=$(stat -f%m .rake_tasks)
-    changed=$(stat -f%m Rakefile)
+    accurate=$(stat -f .rake_tasks)
+    changed=$(stat -f Rakefile)
     return $(expr $accurate '>=' $changed)
   fi
 }
