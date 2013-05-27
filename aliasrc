@@ -45,8 +45,6 @@ alias r="rake"
 alias screen="screen -h 5000"
 alias emacs="open -a Emacs.app"
 alias em="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no-wait"
-alias sl="cd ~/crri/solaro/"
-alias sca="cd ~/projects/securo_admin/"
 alias ls="ls -G"
 
 # misc.

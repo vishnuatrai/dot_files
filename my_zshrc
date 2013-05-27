@@ -5,8 +5,6 @@ bindkey -e
 
 PS1='%2~> '
 
-setopt prompt_subst
-
 # git theming default: Variables for theming the git info prompt
 ZSH_THEME_GIT_PROMPT_PREFIX="git:("         # Prefix at the very beginning of the prompt, before the branch name
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"             # At the very end of the prompt
@@ -68,9 +66,6 @@ unsetopt flowcontrol
 
 WORDCHARS=''
 
-autoload -U compinit
-compinit
-
 zmodload -i zsh/complist
 
 ## case-insensitive (all),partial-word and then substring completion
@@ -102,33 +97,21 @@ if [ -f ~/.ssh/known_hosts ]; then
 fi
 #end of completion related stuff
 
-#export PATH=/opt/ree/bin:/opt/git/bin:/opt/local/bin:/opt/local/sbin:$HOME/bin:$PATH
-
-export PATH=/usr/local/bin:$HOME/bin:$PATH
-alias ru='ps -ef | grep ruby'
 
 export CC=/usr/bin/gcc-4.5
 export LC_CTYPE=en_US.UTF-8 export LC_ALL=en_US.UTF-8
 
 
-#export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/usr/local/Cellar/mysql/5.1.55/lib"
-#rvm_archflags="-arch i386"
 
-#export JRUBY_OPTS=--1.9
 
-# Oracle specific
-export DYLD_LIBRARY_PATH="/usr/local/oracle/instantclient_10_2"
-export SQLPATH="/usr/local/oracle/instantclient_10_2"
-export TNS_ADMIN="/usr/local/oracle/network/admin"
-export NLS_LANG="AMERICAN_AMERICA.UTF8"
-export PATH=$PATH:$DYLD_LIBRARY_PATH
 
 source $HOME/.aliasrc
 #source "$HOME//src/dot_files/zshrc"
 source "$HOME/.zsh.local"
 source "$HOME/.zsh_profile.d/history.zsh"
 source "$HOME/.zsh_profile.d/edit.zsh"
-
+source "$HOME/.zsh_profile.d/utilities.zsh"
+source "$HOME/.zsh_profile.d/completion.zsh"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin
