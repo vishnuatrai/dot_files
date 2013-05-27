@@ -19,22 +19,8 @@ PR_NO_COLOUR="%{$terminfo[sgr0]%}"
 
 function precmd() {
   head_info=$(git symbolic-ref HEAD 2> /dev/null)
-  # rvm_use=$(rvm info|egrep -C 1 'homes'|grep 'gem'|cut -d\: -f 2|cut -d\" -f 2 )
-  # 
-  # if [[ $rvm_use =~ 'not set' ]]; then
-  #   rvm_flag='system'
-  # else
-  #   rvm_flag=$rvm_use[(ws:/:)-1]
-  # fi
-
   rvm_prompt_info=$(~/.rvm/bin/rvm-prompt 2> /dev/null)
-  
-  # if [[ $rvm_prompt_info =~ ' ' ]]; then
-  #   rvm_flag='system'
-  # else
-    rvm_flag=$rvm_prompt_info
-  # fi
-  
+  rvm_flag=$rvm_prompt_info
   RPROMPT='$PR_RED$rvm_flag$PR_NO_COLOUR'
   if [[ $head_info =~ '^refs*' ]]; then
     branch_name=$head_info[(ws:/:)-1]
@@ -50,10 +36,6 @@ function precmd() {
 }
 
 
-export CC=/usr/bin/gcc-4.5
-export LC_CTYPE=en_US.UTF-8 export LC_ALL=en_US.UTF-8
-
-
 source $HOME/.aliasrc
 #source "$HOME//src/dot_files/zshrc"
 source "$HOME/.zsh.local"
@@ -63,5 +45,6 @@ source "$HOME/.zsh_profile.d/utilities.zsh"
 source "$HOME/.zsh_profile.d/completion.zsh"
 source "$HOME/.zsh_profile.d/colors.zsh"
 
+export PATH=/usr/local/bin:$PATH:$HOME/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin
