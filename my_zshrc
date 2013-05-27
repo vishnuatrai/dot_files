@@ -56,19 +56,6 @@ function precmd() {
   fi
 }
 
-#history stuff
-## Command history configuration
-HISTFILE=$HOME/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-
-setopt hist_ignore_dups # ignore duplication command history list
-setopt share_history # share command history data
-
-setopt hist_verify
-setopt inc_append_history
-setopt extended_history
-setopt hist_expire_dups_first
 
 # completion related stuff
 ## fixme - the load process here seems a bit bizarre
@@ -141,6 +128,7 @@ export PATH=$PATH:$DYLD_LIBRARY_PATH
 source $HOME/.aliasrc
 #source "$HOME//src/dot_files/zshrc"
 source "$HOME/.zsh.local"
+source "$HOME/.zsh_profile.d/history.zsh"
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
