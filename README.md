@@ -9,8 +9,8 @@
   $ ln -s ~/dot_files/gitconfig ~/.gitconfig  
   $ mkdir ~/bin (if bin directory doesn't exist)  
   $ ln -s ~/sake ~/bin/sake  
-  $ ln -s ~/dot_files/screenrc ~/.screenrc  
-  $ ln -s src/dot_files/vimrc ~/.vimrc
+  $ ln -s ~/dot_files/vim ~/.vim
+  $ ln -s ~/dot_files/vimrc ~/.vimrc
   
   
 
