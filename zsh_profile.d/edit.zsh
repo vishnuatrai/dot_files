@@ -1,4 +1,4 @@
-# vi mode
-setopt vi
+#vi mode
+#setopt vi
 
 export EDITOR=vim
