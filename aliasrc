@@ -13,7 +13,6 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias o=$EDITOR
 alias dotf="cd $HOME/.dotfiles"
-alias ls="ls -G"
 alias mkdir="mkdir -p"
 alias s="sake"
 # services
@@ -47,7 +46,7 @@ alias r="rake"
 alias screen="screen -h 5000"
 alias emacs="open -a Emacs.app"
 alias em="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no-wait"
-alias ls="ls -G"
+alias ls="ls -G --color=auto"
 
 # misc.
 alias timestamp="date +%Y%m%d%H%M%S"
