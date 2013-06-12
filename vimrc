@@ -157,7 +157,8 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 autocmd BufLeave,FocusLost * silent! wall
 
 " NERDTree for projects
-map <leader>n :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
