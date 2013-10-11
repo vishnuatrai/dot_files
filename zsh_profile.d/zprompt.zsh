@@ -97,6 +97,11 @@ zle -N zle-keymap-select
 
 function precmd {
   $(git status 2> /dev/null >! "/tmp/git-status-$$")
+  case $TERM in
+    xterm*)
+      print -Pn "\e]0; %.\a"
+    ;;  
+  esac
 }
 
 _current_ruby() {
