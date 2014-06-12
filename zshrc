@@ -6,6 +6,7 @@ setopt correct
 export REMOTE_GEM_CACHE_PATH=$HOME/.remote-gem-cache
 export ZSH_HISTORY_PATH=$HOME/.zsh_history
 export HOMEBREW_SEARCH_CACHE_PATH=$HOME/.homebrew-search-cache
+#export GIT_CURL_VERBOSE=1  #to make git network calls verbose
 
 # Oracle specific
 #export DYLD_LIBRARY_PATH="/usr/local/oracle/instantclient_10_2"
