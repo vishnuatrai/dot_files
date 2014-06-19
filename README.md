@@ -12,7 +12,8 @@
         $ ln -s ~/dot_files/vim ~/.vim  
         $ ln -s ~/dot_files/vimrc ~/.vimrc  
         $ ln -s ~/dot_files/aliasrc ~/.aliasrc 
-        $ ln -s ~/dot_files/gemrc ~/.gemrc 
+        $ ln -s ~/dot_files/gemrc ~/.gemrc
+        $ ln -s ~/dot_files/bowerrc ~/.bowerrc 
     
 3. Local Settings  
 
