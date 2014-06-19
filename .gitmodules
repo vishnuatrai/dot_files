@@ -1,0 +1,3 @@
+[submodule "grunt-init/gruntfile"]
+	path = grunt-init/gruntfile
+	url = https://github.com/gruntjs/grunt-init-gruntfile.git

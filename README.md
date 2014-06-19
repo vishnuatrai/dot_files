@@ -14,6 +14,7 @@
         $ ln -s ~/dot_files/aliasrc ~/.aliasrc 
         $ ln -s ~/dot_files/gemrc ~/.gemrc
         $ ln -s ~/dot_files/bowerrc ~/.bowerrc 
+        $ ln -s ~/dot_files/grunt-init ~/.grunt-init
     
 3. Local Settings  
 
