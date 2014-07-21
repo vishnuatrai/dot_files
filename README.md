@@ -2,19 +2,20 @@
 1. Clone the repo  
 2. Create couple of symbolic links  
 
-        $ ln -s ~/dot_files/zsh_profile.d ~/.zsh_profile.d  
-        $ ln -s ~/dot_files/zshrc ~/.zshrc  
-        $ ln -s ~/dot_files/irbrc ~/.irbrc  
-        $ ln -s ~/dot_files/gitconfig ~/.gitconfig  
-        $ ln -s ~/dot_files/git_ignore ~/.gitignore  
+        $ ln -s ~/src/dot_files/zsh_profile.d ~/.zsh_profile.d  
+        $ ln -s ~/src/dot_files/zshrc ~/.zshrc  
+        $ ln -s ~/src/dot_files/irbrc ~/.irbrc  
+        $ ln -s ~/src/dot_files/gitconfig ~/.gitconfig  
+        $ ln -s ~/src/dot_files/gitignore ~/.gitignore  
+        $ ln -s ~/src/dot_files/gitk ~/.gitk  
         $ mkdir ~/bin (if bin directory doesn't exist)  
-        $ ln -s ~/sake ~/bin/sake  
-        $ ln -s ~/dot_files/vim ~/.vim  
-        $ ln -s ~/dot_files/vimrc ~/.vimrc  
-        $ ln -s ~/dot_files/aliasrc ~/.aliasrc 
-        $ ln -s ~/dot_files/gemrc ~/.gemrc
-        $ ln -s ~/dot_files/bowerrc ~/.bowerrc 
-        $ ln -s ~/dot_files/grunt-init ~/.grunt-init
+        $ ln -s ~/src/dot_files/sake ~/bin/sake  
+        $ ln -s ~/src/dot_files/vim ~/.vim  
+        $ ln -s ~/src/dot_files/vimrc ~/.vimrc  
+        $ ln -s ~/src/dot_files/aliasrc ~/.aliasrc 
+        $ ln -s ~/src/dot_files/gemrc ~/.gemrc
+        $ ln -s ~/src/dot_files/bowerrc ~/.bowerrc 
+        $ ln -s ~/src/dot_files/grunt-init ~/.grunt-init
     
 3. Local Settings  
 
