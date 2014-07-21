@@ -1,0 +1,3 @@
+# local projects
+alias cl="cd ~/apps/idexcel/CyncAbl-R3"
+alias rls_p="cd ~/apps/rails"
