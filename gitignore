@@ -6,6 +6,8 @@ jferris-*.gemspec
 *.scratch.*
 .DS_Store
 .rbenv-version
+.ruby-version
+.ruby-gemset
 *.iml
 /public/bower_components
 /node_modules
