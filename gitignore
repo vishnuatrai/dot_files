@@ -12,7 +12,7 @@ jferris-*.gemspec
 /public/bower_components
 /node_modules
 
-.idea/
+/.idea/
 .bundle
 .rvmrc
 /config/database.yml
