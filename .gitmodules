@@ -2,3 +2,6 @@
 	path = grunt-init/gruntfile
 	url = git@github.com:gruntjs/grunt-init-gruntfile.git
 
+[submodule "vim/bundle/Vundle.vim"]
+	path = vim/bundle/Vundle.vim
+	url = git@github.com:gmarik/Vundle.vim.git
