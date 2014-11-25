@@ -5,6 +5,8 @@ sudo apt-get install git
 sudo apt-get install chromium-browser
 sudo apt-get install mysql-server-5.6 mysql-client-5.6
 sudo apt-get install postgresql-9.3 pgadmin3
+sudo apt-get install libpq-dev
+
 sudo apt-get install redis-server
 sudo apt-get install curl
 sudo apt-get install openjdk-7-jre
@@ -46,7 +48,7 @@ source ~/.zshrc
 \curl -sSL https://get.rvm.io | bash
 source ~/.zshrc
 
-rvm install ruby-2.0.0-p481
+rvm install ruby-2.0.0-p598
 rvm install ruby-2.1.5
 rvm use ruby-2.1.5 --default
 gem install colored grit
