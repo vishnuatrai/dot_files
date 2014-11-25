@@ -1,11 +1,15 @@
 # packages
-sudo apt-get install skype
+sudo apt-get update
+sudo apt-get install vim
 sudo apt-get install git
 sudo apt-get install zsh
 sudo apt-get install chromium-browser
 sudo apt-get install mysql-server-5.6 mysql-client-5.6
 sudo apt-get install postgresql-9.3 pgadmin3
 sudo apt-get install redis-server
+sudo apt-get install curl
+sudo apt-get install openjdk-7-jre
+sudo apt-get install openjdk-7-jdk
 
 # mongodb latest stable install
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
@@ -22,6 +26,11 @@ mkdir src
 cd src
 git clone git@github.com:vatrai/dot_files.git
 
+wget http://www.skype.com/go/getskype-linux-beta-ubuntu-64
+sudo dpkg -i getskype-*
+#sudo apt-get -f install
+
+source ~/.zshrc
 ln -s ~/src/dot_files/zsh_profile.d ~/.zsh_profile.d
 ln -s ~/src/dot_files/zshrc ~/.zshrc
 ln -s ~/src/dot_files/irbrc ~/.irbrc
@@ -47,6 +56,8 @@ gem install colored grit
 
 # nvm install
 curl https://raw.githubusercontent.com/creationix/nvm/v0.19.0/install.sh | bash
+source ~/.zshrc
+
 nvm install 0.10.28
 nvm install 0.10
 nvm install 0.11
