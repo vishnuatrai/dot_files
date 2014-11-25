@@ -36,6 +36,20 @@ ln -s ~/src/dot_files/aliasrc ~/.aliasrc
 ln -s ~/src/dot_files/gemrc ~/.gemrc
 ln -s ~/src/dot_files/bowerrc ~/.bowerrc
 ln -s ~/src/dot_files/grunt-init ~/.grunt-init
+source ~/.zshrc
 
+# rvm install
+\curl -sSL https://get.rvm.io | bash
+rvm install ruby-2.0.0-p481
+rvm install ruby-2.1.5
+rvm use ruby-2.1.5 --default
+gem install colored grit
+
+# nvm install
+curl https://raw.githubusercontent.com/creationix/nvm/v0.19.0/install.sh | bash
+nvm install 0.10.28
+nvm install 0.10
+nvm install 0.11
+nvm alias default 0.10.28
 
 echo "...completed..."
