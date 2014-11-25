@@ -6,7 +6,7 @@ sudo apt-get install chromium-browser
 sudo apt-get install mysql-server-5.6 mysql-client-5.6
 sudo apt-get install postgresql-9.3 pgadmin3
 sudo apt-get install libpq-dev
-
+sudo apt-get install libmysqlclient-dev
 sudo apt-get install redis-server
 sudo apt-get install curl
 sudo apt-get install openjdk-7-jre
