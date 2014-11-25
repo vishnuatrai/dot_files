@@ -2,7 +2,6 @@
 sudo apt-get update
 sudo apt-get install vim
 sudo apt-get install git
-sudo apt-get install zsh
 sudo apt-get install chromium-browser
 sudo apt-get install mysql-server-5.6 mysql-client-5.6
 sudo apt-get install postgresql-9.3 pgadmin3
@@ -17,9 +16,6 @@ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | 
 sudo apt-get update
 sudo apt-get install -y mongodb-org
 
-# change shell to zsh
-sudo chsh
-
 # configure dot files
 cd 
 mkdir src
@@ -30,7 +26,6 @@ wget http://www.skype.com/go/getskype-linux-beta-ubuntu-64
 sudo dpkg -i getskype-*
 #sudo apt-get -f install
 
-source ~/.zshrc
 ln -s ~/src/dot_files/zsh_profile.d ~/.zsh_profile.d
 ln -s ~/src/dot_files/zshrc ~/.zshrc
 ln -s ~/src/dot_files/irbrc ~/.irbrc
@@ -49,6 +44,8 @@ source ~/.zshrc
 
 # rvm install
 \curl -sSL https://get.rvm.io | bash
+source ~/.zshrc
+
 rvm install ruby-2.0.0-p481
 rvm install ruby-2.1.5
 rvm use ruby-2.1.5 --default
