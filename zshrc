@@ -26,7 +26,9 @@ for zsh_source in $HOME/.zsh_profile.d/*.zsh; do
 done
 
 source $HOME/.aliasrc
-source "$HOME/.zsh.local"
+if [ -f "$HOME/.zsh.local" ]; then
+  source ~/.zsh.local
+fi
 
 current
 

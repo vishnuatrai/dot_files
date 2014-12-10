@@ -28,7 +28,7 @@ git clone git@github.com:vatrai/dot_files.git
 
 wget http://www.skype.com/go/getskype-linux-beta-ubuntu-64
 sudo dpkg -i getskype-*
-#sudo apt-get -f install
+sudo apt-get -f install
 
 ln -s ~/src/dot_files/zsh_profile.d ~/.zsh_profile.d
 ln -s ~/src/dot_files/zshrc ~/.zshrc
@@ -44,6 +44,12 @@ ln -s ~/src/dot_files/aliasrc ~/.aliasrc
 ln -s ~/src/dot_files/gemrc ~/.gemrc
 ln -s ~/src/dot_files/bowerrc ~/.bowerrc
 ln -s ~/src/dot_files/grunt-init ~/.grunt-init
+source ~/.zshrc
+
+cd ~/src/dot_files
+git submodule init
+git submodule update
+vim +PluginInstall +qall
 source ~/.zshrc
 
 # rvm install
