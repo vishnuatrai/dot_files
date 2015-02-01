@@ -1,0 +1,39 @@
+#!/bin/bash
+# FileNamePath "/etc/init.d/unicorn"
+#To start unicorn server - $/etc/init.d/app-unicorn start
+#To stop unicorn server - $/etc/init.d/app-unicorn stop
+#To restart unicorn server - $/etc/init.d/app-unicorn restart
+
+#UNICORN=/home/user/.rvm/gems/ruby-2.1.1/bin/unicorn
+UNICORN=/usr/local/rvm/gems/ruby-2.1.1@rails_4/bin/unicorn_rails
+BUNDLE_PATH=/usr/local/rvm/gems/ruby-2.1.1@global/bin/bundle
+PATH=$PATH
+KILL=/bin/kill
+APP_ROOT=/home/app/
+PID=$APP_ROOT/tmp/pids/unicorn.pid
+GEM_HOME=/home/usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/gems/2.1.0
+export PATH="/home/ruby/2.1.0/bin:$PATH"
+sig () {
+  test -s "$PID" && kill -$1 `cat $PID`
+}
+
+case "$1" in
+        start)
+                echo "Starting unicorn..."
+                # su - user -c "cd $APP_ROOT && $BUNDLE_PATH exec $UNICORN -D -E production -c $APP_ROOT/config/unicorn.rb" ## "Enable this line when root user only $
+                  cd $APP_ROOT && $BUNDLE_PATH exec $UNICORN -D -E production -c $APP_ROOT/config/unicorn.rb # user can restart unicorn servivce
+                ;;
+        stop)
+                sig QUIT && echo "Stopped Unicorn" && exit 0
+                echo >&2 "Unicorn Not running"
+                ;;
+        restart)
+                $0 stop
+                $0 start
+                ;;
+        status)
+                ;;
+        *)
+                echo "Usage: $0 {start|stop|restart|status}"
+               ;;
+esac
