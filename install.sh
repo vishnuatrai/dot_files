@@ -13,6 +13,7 @@ sudo apt-get install redis-server
 sudo apt-get install curl
 sudo apt-get install openjdk-7-jre
 sudo apt-get install openjdk-7-jdk
+sudo apt-get install zsh
 
 # mongodb latest stable install
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
@@ -24,7 +25,7 @@ sudo apt-get install -y mongodb-org
 cd 
 mkdir src
 cd src
-git clone git@github.com:vatrai/dot_files.git
+git clone https://github.com/vatrai/dot_files.git
 
 wget http://www.skype.com/go/getskype-linux-beta-ubuntu-64
 sudo dpkg -i getskype-*

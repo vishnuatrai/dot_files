@@ -1,7 +1,7 @@
 [submodule "grunt-init/gruntfile"]
 	path = grunt-init/gruntfile
-	url = git@github.com:gruntjs/grunt-init-gruntfile.git
+	url = https://github.com/gruntjs/grunt-init-gruntfile.git
 
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
-	url = git@github.com:gmarik/Vundle.vim.git
+	url = https://github.com/gmarik/Vundle.vim.git
