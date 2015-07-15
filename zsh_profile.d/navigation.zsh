@@ -5,7 +5,8 @@ cdpath=($HOME/dev/vatrai $HOME/dev/gems $HOME/dev/personal)
 
 function chpwd {
   echo $(pwd) >! $CURRENT_PROJECT_PATH
-  ls -G --color=auto
+  #ls -G --color=auto  #ubuntu
+  ls -G                #Mac OS
 }
 
 current() {

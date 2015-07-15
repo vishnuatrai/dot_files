@@ -46,7 +46,8 @@ alias r="rake"
 alias screen="screen -h 5000"
 alias emacs="open -a Emacs.app"
 alias em="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no-wait"
-alias ls="ls -G --color=auto"
+#alias ls="ls -G --color=auto"      #Ubuntu
+alias ls="ls -G"                    #Mac OS 
 
 # misc.
 alias timestamp="date +%Y%m%d%H%M%S"
