@@ -21,7 +21,8 @@
 
         ~/.zsh.local will be required for local zsh settings   
         ~/.vim.local will be required for local vim settings
-  
+        ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+~/bin/subl #For Mac OSX  
 4. You may have to modify the zshrc file to your liking a bit.
    The PATH and other stuff is configured according to the way, 
    I have setup my machine.You may need to change that.

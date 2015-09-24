@@ -1,3 +1,4 @@
 alias cl="cd ~/apps/nds/CyncAbl-R3"
 alias nds="cd ~/apps/nds"
 alias rbm="~/Downloads/RubyMine-5.4.3.2.1/bin/rubymine.sh"
+alias pg.service="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log" #For Mac OSX
