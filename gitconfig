@@ -38,3 +38,5 @@
 	prompt = false
 [diff]
 	tool = Kaleidoscope
+#[url "https://"]
+#    insteadOf = git://	

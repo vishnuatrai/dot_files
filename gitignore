@@ -20,3 +20,4 @@ jferris-*.gemspec
 /public/assets/
 /db/schema.rb
 /nbproject/
+.rake_tasks
