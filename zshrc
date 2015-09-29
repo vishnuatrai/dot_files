@@ -37,3 +37,4 @@ export PATH=/usr/local/bin:$PATH:$HOME/bin
 PATH=$PATH:$HOME/.rvm/bin
 
 [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # This loads nvm
+#eval "$(boot2docker shellinit)" #for docker env variables
