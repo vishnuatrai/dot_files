@@ -36,5 +36,7 @@ export PATH=/usr/local/bin:$PATH:$HOME/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin
 
+export MAHOUT_DIR="/usr/local/Cellar/mahout/0.11.0/"
+
 [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # This loads nvm
 eval "$(boot2docker shellinit 2>/dev/null)" #for docker env variables
