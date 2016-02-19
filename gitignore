@@ -21,3 +21,5 @@ jferris-*.gemspec
 /db/schema.rb
 /nbproject/
 .rake_tasks
+vendor/bundle/
+**/*.sqlite3
