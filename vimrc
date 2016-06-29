@@ -166,3 +166,5 @@ map <C-n> :NERDTreeToggle<CR>
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+highlight Normal ctermbg=black
