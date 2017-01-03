@@ -39,4 +39,8 @@ PATH=$PATH:$HOME/.rvm/bin
 export MAHOUT_DIR="/usr/local/Cellar/mahout/0.11.0/"
 
 [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # This loads nvm
+
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 eval "$(boot2docker shellinit 2>/dev/null)" #for docker env variables

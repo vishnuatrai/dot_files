@@ -23,3 +23,4 @@ jferris-*.gemspec
 .rake_tasks
 vendor/bundle/
 **/*.sqlite3
+results.xml
