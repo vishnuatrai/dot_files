@@ -167,4 +167,9 @@ if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
 
-highlight Normal ctermbg=black
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin"
+    highlight Normal ctermbg=black
+  endif
+endif
