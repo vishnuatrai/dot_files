@@ -42,3 +42,5 @@ export MAHOUT_DIR="/usr/local/Cellar/mahout/0.11.0/"
 
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+eval "$(docker-machine env default 2>/dev/null)"
