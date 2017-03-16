@@ -24,3 +24,6 @@ jferris-*.gemspec
 vendor/bundle/
 **/*.sqlite3
 results.xml
+
+fs-app/src/main/resources/application.properties
+src/test/resources/files/tmp/

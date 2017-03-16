@@ -4,6 +4,11 @@ alias ber="bundle exec rake"
 alias bake="bundle exec rake"
 alias be="bundle exec"
 
+alias fsdp="cd /usr/local/src/federated-data/fs-parent && mvn clean install && cp /usr/local/src/federated-data/fs-app/target/fs-app.war /usr/local/src/wildfly-10.1.0.Final/standalone/deployments/ && cd /usr/local/src/federated-data/fs-app"
+alias fsp="/usr/local/src/federated-data"
+alias fss="/usr/local/src/wildfly-10.1.0.Final/bin/standalone.sh --debug"
+
+
 
 alias gbr="git remote prune origin && git branch -r"
 
