@@ -88,3 +88,6 @@ sudo groupadd docker
 sudo gpasswd -a ${USER} docker
 sudo service docker restart
 sudo usermod -aG docker $USER
+
+#Openshift Origin v3 install 
+https://github.com/openshift/origin/releases
