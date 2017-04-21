@@ -89,5 +89,10 @@ sudo gpasswd -a ${USER} docker
 sudo service docker restart
 sudo usermod -aG docker $USER
 
+#Docker compose install
+curl -L https://github.com/docker/compose/releases/download/1.12.0/docker-compose-`uname -s`-`uname -m` > ~/bin/docker-compose
+chmod +x ~/bin/docker-compose
+ln -s ~/bin/docker-compose /usr/local/bin/docker-compose
+
 #Openshift Origin v3 install 
 https://github.com/openshift/origin/releases
