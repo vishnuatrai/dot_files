@@ -56,3 +56,5 @@ alias ls="ls -G"                    #Mac OS
 
 # misc.
 alias timestamp="date +%Y%m%d%H%M%S"
+alias python=python3
+alias pip=pip3
