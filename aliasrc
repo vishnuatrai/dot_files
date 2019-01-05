@@ -3,6 +3,8 @@ alias bes="bundle exec rspec"
 alias ber="bundle exec rake"
 alias bake="bundle exec rake"
 alias be="bundle exec"
+alias startVMs="/Users/vsharm24/src/dot_files/startVMs"
+alias stopVMs="/Users/vsharm24/src/dot_files/stopVMs"
 
 alias fsdp="cd /usr/local/src/federated-data/fs-parent && mvn clean install && cp /usr/local/src/federated-data/fs-app/target/fs-app.war /usr/local/src/wildfly-10.1.0.Final/standalone/deployments/ && cd /usr/local/src/federated-data/fs-app"
 alias fsp="/usr/local/src/federated-data"

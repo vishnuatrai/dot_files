@@ -1,0 +1,5 @@
+
+VBoxManage controlvm "node master" poweroff soft
+VBoxManage controlvm "node1" poweroff soft
+VBoxManage controlvm "node2" poweroff soft
+

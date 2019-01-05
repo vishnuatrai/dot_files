@@ -15,15 +15,17 @@ jferris-*.gemspec
 /.idea/
 .bundle
 .rvmrc
-/config/database.yml
 /config/mongoid.yml
+/config/database.yml
 /public/assets/
 /db/schema.rb
 /nbproject/
 .rake_tasks
 vendor/bundle/
 **/*.sqlite3
-results.xml
 
-fs-app/src/main/resources/application.properties
-src/test/resources/files/tmp/
+.ruby-version
+.project
+
+.recommenders/
+.springBeans
