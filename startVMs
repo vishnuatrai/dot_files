@@ -1,5 +1,0 @@
-
-VBoxManage startvm "node master" --type headless
-VBoxManage startvm "node1" --type headless
-VBoxManage startvm "node2" --type headless
-

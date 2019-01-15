@@ -1,0 +1,5 @@
+
+VBoxManage startvm "master Ubuntu" --type headless
+VBoxManage startvm "node1 Ubuntu" --type headless
+VBoxManage startvm "node2 Ubuntu" --type headless
+

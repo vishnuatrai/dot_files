@@ -1,0 +1,5 @@
+
+VBoxManage controlvm "master centOS" poweroff soft
+VBoxManage controlvm "worker1 centOS" poweroff soft
+VBoxManage controlvm "worker2 centOS" poweroff soft
+

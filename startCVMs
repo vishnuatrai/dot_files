@@ -1,0 +1,5 @@
+
+VBoxManage startvm "master centOS" --type headless
+VBoxManage startvm "worker1 centOS" --type headless
+VBoxManage startvm "worker2 centOS" --type headless
+

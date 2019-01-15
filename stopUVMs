@@ -1,0 +1,5 @@
+
+VBoxManage controlvm "master Ubuntu" poweroff soft
+VBoxManage controlvm "node1 Ubuntu" poweroff soft
+VBoxManage controlvm "node2 Ubuntu" poweroff soft
+
