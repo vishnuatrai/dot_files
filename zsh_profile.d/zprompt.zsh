@@ -63,7 +63,7 @@ _color() {
 }
 
 _user_name() {
-	echo "vatrai"
+	echo "vishnuatrai"
 }
 
 _separate()               { if [ -n "$1" ]; then echo " $1"; fi }

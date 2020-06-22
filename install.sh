@@ -25,7 +25,7 @@ sudo apt-get install -y mongodb-org
 cd 
 mkdir src
 cd src
-git clone https://github.com/vatrai/dot_files.git
+git clone https://github.com/vishnuatrai/dot_files.git
 
 wget http://www.skype.com/go/getskype-linux-beta-ubuntu-64
 sudo dpkg -i getskype-*

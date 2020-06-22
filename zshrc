@@ -44,3 +44,7 @@ export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 eval "$(docker-machine env default 2>/dev/null)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/vsharm24/.sdkman"
+[[ -s "/Users/vsharm24/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/vsharm24/.sdkman/bin/sdkman-init.sh"
