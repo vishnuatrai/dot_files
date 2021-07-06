@@ -11,8 +11,7 @@ jferris-*.gemspec
 *.iml
 /public/bower_components
 /node_modules
-
-/.idea/
+.idea/
 .bundle
 .rvmrc
 /config/mongoid.yml
@@ -29,3 +28,6 @@ vendor/bundle/
 
 .recommenders/
 .springBeans
+ebaas-ops/
+target/
+dev/

@@ -1,6 +1,9 @@
 alias pg.service="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log" #For Mac OSX
 alias filezilla="/usr/local/Caskroom/filezilla/3.32.0/FileZilla.app/Contents/MacOS/filezilla &"
 alias oil="cd /Users/vsharm24/apps/oil"
+alias c360="cd /Users/vsharm24/apps/c360"
+alias ebaas="cd /Users/vsharm24/apps/ebaas"
+alias skwave="cd /Users/vsharm24/apps/shockwave"
 
 export PATH=/opt/mapr/bin:/opt/mapr/hadoop/hadoop-2.7.0/bin:/opt/mapr/hadoop/hadoop-2.7.0/bin:${PATH}
 export PATH="/usr/local/opt/mongodb@3.6/bin:$PATH"
@@ -16,9 +19,9 @@ export PATH="$MAPR_HOME:$PATH"
 export MAPR_TICKETFILE_LOCATION="/usr/local/src/maprticket_ocf"
 #export MAPR_TICKETFILE_LOCATION="/usr/local/src/maprticket_ocf"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
-export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
-export PKG_CONFIG_PATH="/usr/local/opt/mysql@5.7/lib/pkgconfig"
+#export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
+#export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
+#export PKG_CONFIG_PATH="/usr/local/opt/mysql@5.7/lib/pkgconfig"
 
 export PATH="/usr/local/opt/mongodb@3.6/bin:$PATH"
 
@@ -27,3 +30,12 @@ export PATH=$PATH:$JBOSS_HOME/bin
 export PATH=$PATH:/usr/local/opt/rabbitmq/sbin
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export SPRING_PROFILES_ACTIVE=local
+export GROOVY_HOME="/Users/vsharm24/bin/groovy/2.4.0"
+export PATH="$GROOVY_HOME/bin:$PATH"
+export PATH="/Users/vsharm24/bin/apache-maven-3.2.3/bin:$PATH"
+export GOPROXY=direct
+export GOPRIVATE=*.optum.com
+export GOPATH=$HOME/go
+#export GOROOT=/usr/local/bin/go
+export PATH=$PATH:$GOPATH/bin
+
