@@ -39,3 +39,65 @@ export GOPATH=$HOME/go
 #export GOROOT=/usr/local/bin/go
 export PATH=$PATH:$GOPATH/bin
 
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+
+
+#
+# Okta
+#
+alias aws-auth='saml2aws login'
+
+#
+# AWS
+#
+confirm_eb() {
+  echo "Confirm action ($1)?"
+
+  if [ -n "$3" ]; then
+    msg=$2
+  else
+    msg=`git rev-parse --abbrev-ref HEAD`
+  fi
+
+  select yn in "Yes" "No"; do
+    case $yn in
+      Yes)
+        $2 --message $msg
+        break
+        ;;
+      No)
+        exit
+        ;;
+    esac
+  done
+}
+
+confirm_ag() {
+  echo "Confirm action ($1)?"
+
+  select yn in "Yes" "No"; do
+    case $yn in
+      Yes)
+        $2
+        break
+        ;;
+      No)
+        exit
+        ;;
+    esac
+  done
+}
+
+# ElasticBeanstalk
+alias deploy-dev-beacons="confirm_eb DEV 'eb deploy --profile lymberdev dev-beacons-ruby25'"
+alias deploy-dev-lymber="confirm_eb DEV 'eb deploy --profile lymberdev dev-lymber-ruby25'"
+alias deploy-prod-beacons="confirm_eb PROD 'eb deploy --profile lymberprod prod-beacons'"
+alias deploy-prod-lymber="confirm_eb PROD 'eb deploy --profile lymberprod prod-lymber-worker-ruby25'"
+
+# API Gateway
+alias deploy-dev-api-gateway="confirm_ag DEV 'rake lymber_utils:aws:gateway:generate_swagger[lymberdev,beacons,dev] lymber_utils:aws:gateway:publish_swagger[lymberdev,dev,./swagger/v1/aws-swagger-v3.json]'"
+alias deploy-stg-api-gateway="confirm_ag STG 'rake lymber_utils:aws:gateway:generate_swagger[lymberdev,beacons,stg] lymber_utils:aws:gateway:publish_swagger[lymberdev,stg,./swagger/v1/aws-swagger-v3.json]'"
+alias deploy-prod-api-gateway="confirm_ag PROD 'rake lymber_utils:aws:gateway:generate_swagger[lymberprod,beacons,prod] lymber_utils:aws:gateway:publish_swagger[lymberprod,prod,./swagger/v1/aws-swagger-v3.json]'"
+

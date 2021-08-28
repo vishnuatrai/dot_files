@@ -18,30 +18,30 @@ export HOMEBREW_SEARCH_CACHE_PATH=$HOME/.homebrew-search-cache
 #export PATH=$PATH:$DYLD_LIBRARY_PATH
 #export PATH=$PATH:$HOME/bin
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 
-for zsh_source in $HOME/.zsh_profile.d/*.zsh; do
-  source $zsh_source
-done
+# for zsh_source in $HOME/.zsh_profile.d/*.zsh; do
+#   source $zsh_source
+# done
 
-source $HOME/.aliasrc
+#source $HOME/.aliasrc
 if [ -f "$HOME/.zsh.local" ]; then
   source ~/.zsh.local
 fi
 
-current
+#current
 
-export PATH=/usr/local/bin:$PATH:$HOME/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-PATH=$PATH:$HOME/.rvm/bin
+# export PATH=/usr/local/bin:$PATH:$HOME/bin
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# PATH=$PATH:$HOME/.rvm/bin
 
-export MAHOUT_DIR="/usr/local/Cellar/mahout/0.11.0/"
+# export MAHOUT_DIR="/usr/local/Cellar/mahout/0.11.0/"
 
 #[ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # This loads nvm
 
-export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# export PYENV_ROOT=/usr/local/var/pyenv
+# if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 #eval "$(docker-machine env default 2>/dev/null)"
 

@@ -31,3 +31,4 @@ vendor/bundle/
 ebaas-ops/
 target/
 dev/
+docker/db/init/03_dev-ebdb-2020-11-19_04-00-25.sql
