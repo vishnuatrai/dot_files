@@ -79,3 +79,5 @@ alias j7='export JAVA_HOME=$JAVA_7_HOME; java -version'
 #alias j7='export JAVA_HOME=$JAVA_7_HOME; export CLASSPATH="$JAVA_HOME/lib"; export PATH="$CLASSPATH:$PATH"; java -version'
 
 alias try_jshell='java11 && java -jar /Users/vsharm24/src/try-artifact-0.2.1.jar'
+
+alias gllg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
