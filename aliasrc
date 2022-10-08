@@ -64,9 +64,6 @@ alias timestamp="date +%Y%m%d%H%M%S"
 alias python=python3
 alias pip=pip3
 
-export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
-export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
-export JAVA_HOME=$JAVA_8_HOME
 
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 #alias j11='export JAVA_HOME=$JAVA_11_HOME; java -version'
@@ -81,3 +78,7 @@ alias j7='export JAVA_HOME=$JAVA_7_HOME; java -version'
 alias try_jshell='java11 && java -jar /Users/vsharm24/src/try-artifact-0.2.1.jar'
 
 alias gllg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+alias pg.service="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log" #For Mac OSX
+alias filezilla="/usr/local/Caskroom/filezilla/3.32.0/FileZilla.app/Contents/MacOS/filezilla &"
+

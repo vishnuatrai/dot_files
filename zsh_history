@@ -1,0 +1,666 @@
+exit
+chsh
+cd
+mkdir src
+ls
+cd src
+git clone git@github.com:vishnuatrai/dot_files.git
+cd dot_files
+ls
+cat README.md
+mkdir ~/bin
+ln -s ~/src/dot_files/sake ~/bin/sake  
+sake
+zsh
+chsh
+git
+code .
+git
+gh
+brew install gh
+ruby
+ruby --version
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install gh
+gh
+ls
+mkdir apps
+cd apps
+ls
+mkdir crap
+cd crap
+gh repo clone vishnuatrai/dot_files
+gh auth login
+ssh-keygen 
+cat ~/.ssh/id_rsa.pub 
+gh repo clone vishnuatrai/dot_files
+gh auth login
+git clone git@github.com:vishnuatrai/dot_files.git
+ls
+gst
+git config --global user.name 'Vishnu Sharma'
+cd
+git config --global user.name Vishnu Sharma
+git config --global user.name 'Vishnu Sharma'
+git config --global user.name 'Vishnu Sharma'
+ sudo xcodebuild -license
+git config --global user.name 'Vishnu Sharma'
+git config --global user.name 'Vishnu Sharma'
+git config --global user.name 'Vishnu Sharma'
+git
+gdb
+git
+/usr/bin/xcodebuild -version\
+
+ls
+cd
+cat .gitconfig
+mv .gitconfig .gitconfig_old
+cd
+cat src/dot_files/README.md
+ln -s ~/src/dot_files/irbrc ~/.irbrc
+ln -s ~/src/dot_files/gitignore ~/.gitignore
+ln -s ~/src/dot_files/gitk ~/.gitk  
+ln -s ~/src/dot_files/aliasrc ~/.aliasrc
+cat src/dot_files/gemrc
+ln -s ~/src/dot_files/gemrc ~/.gemrc
+ln -s ~/src/dot_files/irbrc ~/.irbrc  
+cat src/dot_files/zshrc
+code src/dot_files/zshrc
+cat src/dot_files/zshrc
+rvm
+cat src/dot_files/zshrc
+cat .aliasrc 
+gllg
+cd Projects
+git clone git@github.com:smartpension/api.git
+cd api
+rvm install 3.0.3
+rvm list
+rvm --default use 3.0.3
+docker-compose
+docker --version
+docker-compose
+gem list
+gem list 
+gem list | grep bundle
+bundle install --path=vendor/bundle
+brew install imagemagick\
+
+docker-compose up mysql redis\
+
+bundle install --path=vendor/bundle
+rm -rf vendor/bundle/ruby/3.0.0/cache
+bundle install --path=vendor/bundle
+bundle install 
+cat .bundle/config
+rm -rf .bundle/config
+bundle install 
+cd
+ls
+cat src/dot_files/README.md
+ln -s ~/src/dot_files/gitconfig ~/.gitconfig
+cat .gitconfig
+vim .gitconfig
+bundle install 
+gh auth login
+bundle install 
+gh auth login
+bundle install 
+cat .ssh/id_rsa.pub
+bundle config enterprise.contribsys.com vishnuatrai:puspas01 
+bundle
+bundle config 
+cat ~/.bundle/config
+bundle config enterprise.contribsys.com 42a95866:a9307855
+bundle install 
+ls -lart .
+cd .bundle
+ls
+..
+pwd
+rm -rf .bundle
+rm -rf ~/.bundle/
+bundle config enterprise.contribsys.com 42a95866:a9307855
+bundle
+rm -rf ~/.bundle
+bundle config enterprise.contribsys.com 42a95866:a9307855
+cat ~/.bundle/config
+bundle install
+vim ~/.bundle/config 
+cat ~/.bundle/config
+bundle install
+..
+git clone https://github.com/smartpension/active_template
+git clone https://github.com/smartpension/active_template.git
+git clone git@github.com:smartpension/active_template.git
+rm -rf ~/.bundle/cache
+bundle install
+rm -rf ~/.bundle/cache
+bundle install
+git stash
+cat ~/.bundle/config
+brew install imagemagick\
+\
+
+cat .gitconfig
+pwd
+git clone https://github.com/smartpension/retirement_estimator.git
+git clone https://github.com/smartpension/retirement_estimator
+rm -rf retirement_estimator
+git clone https://github.com/smartpension/retirement_estimator
+bundle 
+cat ~/.gemrc
+rm ~/.gemrc
+bundle 
+cat ~/.gem/credentials
+touch ~/.gem/credentials
+mkdir ~/.gem
+touch ~/.gem/credentials
+vim ~/.gem/credentials
+export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=vishnuatrai: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
+export BUNDLE_GITHUB__COM=x-access-token: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
+bundle 
+brew install mysql-client
+bundle 
+brew install mysql5
+brew install mysql@5.7.12
+brew install mysql@5.7
+bundle 
+brew link openssl --force
+brew install openssl 
+openssl
+brew --prefix openssl
+rvm list
+rvm reinstall 3.0.3 --with-openssl-dir=`brew --prefix openssl`\
+
+bundle
+brew install zlib1g-dev libssl-dev
+brew install zlib1g-dev 
+brew install libssl-dev
+brew --prefix openssl\
+
+openssl
+rvm reinstall 3.0.3 --with-openssl-dir=`brew --prefix openssl`\
+
+rvm pkg install openssl
+rvm remove 3.0.3\
+
+rvm install 3.0.3 --with-openssl-dir=$HOME/.rvm/usr\
+
+rm -rf ~/.bundle/cache
+bundle
+export BUNDLE_GITHUB__COM=x-access-token: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
+export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=vishnuatrai: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
+bundle
+brew uninstall libssl-dev
+brew uninstall openssl 
+openssl
+brew --prefix openssl\
+
+xcode-select --install
+git
+git config --global user.name 'Vishnu Sharma'
+git config --global user.email 'vishnu.sharma@smartpension.co.uk'
+ls
+cd
+mkdir Projects
+cd Projects
+rvm list
+ruby --version
+gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB\
+
+\curl -sSL https://get.rvm.io | bash\
+
+\curl -sSL https://get.rvm.io | bash\
+
+rvm list
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"\
+\
+
+: 1664978022:0;vim .gem/credentials 
+: 1664978030:0;rm -rf .gem
+: 1664978040:0;rvm list 
+: 1664978049:0;rvm remove 3.0.3
+: 1664978067:0;rvm pkg uninstall openssl
+: 1664978162:0;rvm list
+: 1664978175:0;rvm pkg purge openssl
+: 1664978184:0;rvm pkg --help
+: 1664978198:0;rvm pkg remove openssl
+: 1664978477:0;openssl
+: 1664978512:0;cd
+: 1664978514:0;cd .rvm
+: 1664978517:0;ls
+: 1664978520:0;cd archives
+: 1664978522:0;ls
+: 1664978529:0;rm -rf ruby-3.0.3.tar.gz
+: 1664978562:0;../gems
+: 1664978564:0;ls
+: 1664978568:0;rm -rf cache
+: 1664978570:0;..
+: 1664978572:0;ls
+: 1664978575:0;rvm install 3.0.3 --with-openssl-dir=`brew --prefix openssl`\
+
+: 1664978947:0;bundle
+: 1664978957:0;cd Projects/api/
+: 1664978960:0;bundle
+: 1664978994:0;cd
+: 1664978998:0;cd .bundle
+: 1664978999:0;ls
+: 1664979063:0;export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=vishnuatrai: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
+: 1664979076:0;export BUNDLE_GITHUB__COM=x-access-token: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
+: 1664979080:0;bundle
+: 1664979126:0;cd
+: 1664979136:0;cd Projects/api
+: 1665035563:0;gf
+: 1665035587:0;s gb
+: 1665035876:0;cat ~/src/dot_files/README.md
+: 1665035890:0;sake
+: 1665035898:0;~/bin/sake
+: 1665035906:0;~/bin/sake gb
+: 1665035913:0;gem install colored grit
+: 1665035930:0;~/bin/sake gb
+: 1665035934:0;gf
+: 1665035941:0;~/bin/sake gb
+: 1665035946:0;g st
+: 1665035953:0;bundle
+: 1665035993:0;bundle config https://rubygems.pkg.github.com/smartpension vishnuatrai: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
+: 1665035996:0;bundle
+: 1665036144:0;export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"\
+
+: 1665036149:0;export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"\
+
+: 1665036152:0;bundle
+: 1665036276:0;brew link --force openssl
+: 1665036298:0;brew install openssl
+: 1665036330:0;brew link --force openssl
+: 1665036349:0;export PATH="/usr/local/opt/openssl@3/bin:$PATH"
+: 1665036355:0;export LDFLAGS="-L/usr/local/opt/openssl@3/lib"
+: 1665036359:0;export CPPFLAGS="-I/usr/local/opt/openssl@3/include"
+: 1665036364:0;openssl
+: 1665036374:0;openssl version
+: 1665036383:0;bundle
+: 1665036423:0;brew install mysql@5.7
+: 1665036433:0;mysql
+: 1665036470:0;/usr/local/mysql/bin/mysql version
+: 1665036489:0;/usr/local/mysql/bin
+: 1665036498:0;export PATH=${PATH}:/usr/local/mysql/bin
+: 1665036501:0;mysql
+: 1665036510:0;ln -s /usr/local/mysql/bin/mysql /usr/local/bin/mysql\
+
+: 1665036513:0;mysql
+: 1665037068:0;bundle
+: 1665037102:0;brew reinstall mysql@5.7
+: 1665037120:0;mysql_secure_installation
+: 1665037176:0;/usr/local/mysql/bin/mysql --version\
+
+: 1665037186:0;export PATH=$PATH:/usr/local/mysql/bin\
+
+: 1665037191:0;mysql
+: 1665037204:0;/usr/local/mysql/bin
+: 1665037212:0;brew services start mysql
+: 1665037253:0;brew install mysql@5.7\
+
+: 1665037266:0;brew services start mysql@5.7\
+
+: 1665037280:0;mysql
+: 1665037322:0;brew install mysql-client@5.7
+: 1665037336:0;mysql
+: 1665037360:0;export PATH="/usr/local/opt/mysql-client@5.7/bin:$PATH"
+: 1665037364:0;mysql
+: 1665037403:0;bundle
+: 1665037464:0;docker-compose up mysql redis\
+
+: 1665037482:0;export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=vishnuatrai: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
+: 1665037492:0;export BUNDLE_GITHUB__COM=x-access-token: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
+: 1665037498:0;docker-compose up mysql redis\
+
+: 1665037512:0;docker ps
+: 1665037556:0;docker-compose up mysql redis\
+
+: 1665037578:0;docker-compose up mysql redis
+: 1665037587:0;docker ps\
+
+: 1665037621:0;export BUNDLE_RUBYGEMS__PKG__GITHUB__COM=vishnuatrai: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
+: 1665037630:0;export BUNDLE_GITHUB__COM=x-access-token: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
+: 1665037638:0;docker ps -a\
+
+: 1665037653:0;docker rm 09386e5bdc19\
+
+: 1665037658:0;docker rm 8444930ae1f1\
+
+: 1665037663:0;docker-compose up mysql redis
+: 1665037690:0;docker ps
+: 1665037695:0;docker ps -a
+: 1665037703:0;docker logs -f 1a6a3fe026d8
+: 1665037876:0;docker ps -a
+: 1665037885:0;docker rm 1a6a3fe026d8 d2e681427e74
+: 1665037892:0;docker images
+: 1665037902:0;docker rmi 9fb1c428ea15 2fd136002c22 
+: 1665037917:0;docker ps -a
+: 1665037920:0;gst
+: 1665037926:0;docker-compose up mysql redis
+: 1665037960:0;docker ps -a
+: 1665037969:0;docker rm d97d3ac38a88 ac55ad38cc6c 
+: 1665037975:0;docker images
+: 1665037983:0;docker rmi 655d456d7d06 2fd136002c22 
+: 1665038085:0;docker-compose up mysql redis
+: 1665038116:0;git reset --hard
+: 1665038121:0;gst
+: 1665038126:0;git log -5
+: 1665038208:0;brew services stop mysql@5.7\
+
+: 1665038221:0;docker-compose up mysql redis
+: 1665038249:0;docker ps
+: 1665038256:0;gst
+: 1665038336:0;brew services list
+: 1665038389:0;export DOCKER_DEFAULT_PLATFORM=linux/amd64  \
+
+: 1665038394:0;docker ps
+: 1665038401:0;docker-compose down
+: 1665038410:0;export DOCKER_DEFAULT_PLATFORM=linux/amd64  \
+
+: 1665038416:0;docker-compose up mysql redis
+: 1665038448:0;docker ps
+: 1665038463:0;docker ps -a
+: 1665038477:0;docker networks
+: 1665038485:0;docker network ls
+: 1665038495:0;docker network rm 0da8ce2d8012
+: 1665038508:0;docker-compose down
+: 1665038514:0;docker network rm 0da8ce2d8012
+: 1665038518:0;docker ps
+: 1665038522:0;docker ps -a
+: 1665038527:0;docker images
+: 1665038541:0;docker rmi 655d456d7d06 2fd136002c22 
+: 1665038568:0;docker images
+: 1665038573:0;docker ps -a
+: 1665038576:0;docker images
+: 1665038669:0;docker volumens
+: 1665038676:0;docker help
+: 1665038696:0;docker help 
+: 1665038713:0;docker help | grep network
+: 1665038720:0;docker help | grep volum
+: 1665038729:0;docker network ls
+: 1665038737:0;docker volume ls
+: 1665038761:0;docker volume rm 0fdbbe66ddd9c66d46f664cbf39a7a4a731d31e1a7623aaeef48f699e61533c2 2f8da4eef4db9b094100e9b44ba6754ca405da52507ac39f7667251287d7cac6 3ee34f1dd7092c382b0782cbf0f76b0b6fb5d4c5d985969e03a14034a997f60c 7d40458e5fec44738acdf795ccea7098282ee39a39f70ed80dcf9914fb72cb12 
+: 1665038775:0;docker volume rm ac29b2dc05082eee390ce59f870b9980ef5c3b53d754f993e10f7afcdf38c972 api_mysql api_node_modules api_web_logs 
+: 1665038779:0;docker volume ls
+: 1665038792:0;docker volume rm api_redis api_worker_logs api_web_tmp 
+: 1665038795:0;docker volume ls
+: 1665038801:0;docker network ls
+: 1665038848:0;echo $DOCKER_DEFAULT_PLATFORM
+: 1665038871:0;docker-compose up mysql redis
+: 1665039298:0;#5.7.34
+: 1665039311:0;docker run --platform linux/amd64 -d mysql:5.7.34
+: 1665039463:0;docker ps
+: 1665039471:0;docker run --platform linux/amd64 -d mysql:5.7.34
+: 1665039477:0;docker ps 
+: 1665039495:0;docker run --platform linux/amd64 mysql:5.7.34 bash
+: 1665039500:0;docker ps -a
+: 1665039516:0;docker run --platform linux/amd64 -it mysql:5.7.34 bash
+: 1665039525:0;docker ps
+: 1665039631:0;./bin/setup\
+
+: 1665039646:0;yarn start
+: 1665039694:0;npm
+: 1665039697:0;node
+: 1665039741:0;brew install node@12.16.1
+: 1665039820:0;brew install node@12
+: 1665039897:0;./bin/setup\
+
+: 1665039903:0;npm
+: 1665039915:0;export PATH="/usr/local/opt/node@12/bin:$PATH"
+: 1665039918:0;npm
+: 1665039967:0;npm install
+: 1665040068:0;./bin/setup\
+
+: 1665040109:0;brew install yarn
+: 1665040167:0;./bin/setup\
+
+: 1665041440:0;cp .env.development.sample .env.development
+: 1665041453:0;./bin/setup\
+
+: 1665044123:0;cd
+: 1665044127:0;cd apps
+: 1665044132:0;cd crap
+: 1665044133:0;ls
+: 1665044170:0;git clone git@bitbucket.org:vishnuatrai/bookmarks.git
+: 1665044231:0;cat ~/.ssh/id_rsa.pub 
+: 1665044250:0;git clone git@bitbucket.org:vishnuatrai/bookmarks.git
+: 1665044255:0;ls
+: 1665044270:0;git clone git@bitbucket.org:vishnuatrai/rpos.git
+: 1665047701:0;./bin/setup\
+
+: 1665047779:0;db:environment:set RAILS_ENV=development
+: 1665047790:0;bin/rails db:environment:set RAILS_ENV=development
+: 1665047804:0;./bin/setup\
+
+: 1665048529:0;ls
+: 1665048543:0;cd
+: 1665048550:0;cd Downloads
+: 1665048565:0;cd
+: 1665048567:0;cd 
+: 1665048570:0;cd Downloads
+: 1665048572:0;ls
+: 1665048582:0;git clone git@bitbucket.org:vishnuatrai/dwnlds.git .
+: 1665048590:0;git clone git@bitbucket.org:vishnuatrai/dwnlds.git 
+: 1665048840:0;#./bin/rails s
+: 1665048874:0;vim /etc/hosts
+: 1665048901:0;sudo vim /etc/hosts
+: 1665048921:0;./bin/rails s
+: 1665039564:9855;docker-compose up mysql redis
+: 1665049425:0;gst
+: 1665049430:0;git status
+: 1665049434:0;git diff 
+: 1665049442:0;	docker-compose up mysql redis
+: 1665049498:0;git stash 
+: 1665049501:0;	docker-compose up mysql redis
+: 1665049509:0;git stash apply
+: 1665049514:0;	docker-compose up mysql redis
+: 1665049691:0;./bin/rails s
+: 1665049934:0;cd
+: 1665049937:0;ls
+: 1665049942:0;cd Downloads/
+: 1665049944:0;ls
+: 1665051258:0;mv ~/Downloads/dwnlds/*.* ~/Downloads
+: 1665051291:0;mv ~/Downloads/dwnlds/dwnlds/*.* ~/Downloads
+: 1665051321:0;ls
+: 1665051325:0;cd
+: 1665051329:0;cd Desktop
+: 1665051347:0;git clone git@bitbucket.org:vishnuatrai/dsktp.git 
+: 1665051365:0;cd
+: 1665051367:0;cd apps
+: 1665051370:0;cd crap
+: 1665051371:0;ls
+: 1665051375:0;cd rpos
+: 1665051409:0;pwd
+: 1665051417:0;cd
+: 1665051420:0;cd apps
+: 1665051422:0;cd crap
+: 1665051423:0;ls
+: 1665051430:0;open .
+: 1665051470:0;ls
+: 1665051473:0;git clone git@bitbucket.org:vishnuatrai/mndb-rps.git
+: 1665051491:0;cd mndb-rps
+: 1665051493:0;ls
+: 1665051497:0;open .
+: 1665051545:0;..
+: 1665051549:0;rm -rf mndb-rps
+: 1665051551:0;git clone git@bitbucket.org:vishnuatrai/micsvc.git
+: 1665051577:0;open .
+: 1665051607:0;cd micsvc
+: 1665051611:0;rm -rf .git
+: 1665051612:0;ls
+: 1665051614:0;cd src
+: 1665051615:0;ls
+: 1665051621:0;cd
+: 1665051626:0;cd apps/crap
+: 1665052223:0;ls
+: 1665052226:0;cd rpos
+: 1665052227:0;ls
+: 1665052235:0;rm -rf .git
+: 1665052237:0;ls
+: 1665052359:0;cd
+: 1665052362:0;cd Desktop
+: 1665052364:0;ls
+: 1665052365:0;cd 
+: 1665052368:0;cd Downloads
+: 1665052370:0;ls
+: 1665052372:0;cd
+: 1665052377:0;cd apps
+: 1665052379:0;ls
+: 1665052381:0;cd crap
+: 1665052382:0;ls
+: 1665052385:0;cd rpos
+: 1665052386:0;ls
+: 1665052390:0;..
+: 1665052391:0;ls
+: 1665052394:0;cd micsvc
+: 1665052395:0;ls
+: 1665052398:0;cd ..
+: 1665052399:0;ls
+: 1665052403:0;cd bookmarks
+: 1665052404:0;ls
+: 1665052411:0;rm -rf .git
+: 1665052412:0;ls
+: 1665052415:0;..
+: 1665052416:0;ls
+: 1665052419:0;cd dot_files
+: 1665052425:0;..
+: 1665052426:0;ls
+: 1665052442:0;export PATH="/usr/local/opt/node@12/bin:$PATH"
+: 1665052452:0;./bin/rails s
+: 1665052522:0;rake routes
+: 1665052539:0;export PATH="/usr/local/opt/node@12/bin:$PATH"
+: 1665052542:0;rake routes
+: 1665052559:0;be rails routes
+: 1665052564:0;rails routes
+: 1665052603:0;rails routes | grep dashboard
+: 1665052676:0;rails routes | grep docs
+: 1665052692:0;gst
+: 1665053563:0;bundle
+: 1665053585:0;cd
+: 1665053872:0;cat .zshrc
+: 1665053997:0;vim .zshrc
+: 1665054041:0;gst
+: 1665054492:0;cd ~/apps/crap
+: 1665054511:0;open .
+: 1665054686:0;gem install solargraph
+: 1665054839:0;gst
+: 1665054847:0;cd
+: 1665054860:0;cat .aliasrc
+: 1665054865:0;s
+: 1665054877:0;gf
+: 1665054895:0;cat .zshrc
+: 1665054910:0;cat .aliasrc
+: 1665054918:0;s
+: 1665054924:0;sake
+: 1665054934:0;r
+: 1665054934:0;sake
+: 1665054942:0;r
+: 1665054942:0;sake
+: 1665054951:0;j8
+: 1665054966:0;gbr
+: 1665054983:0;em
+: 1665054988:0;gllg
+: 1665055001:0;g
+: 1665055003:0;gf
+: 1665055009:0;gbr
+: 1665055015:0;cd
+: 1665055019:0;vim .aliasrc
+: 1665055076:0;ttt
+: 1665055078:0;tttt
+: 1665055088:0;vim .aliasrc
+: 1665055119:0;tttt
+: 1665055121:0;vim .aliasrc
+: 1665055132:0;bes
+: 1665055270:0;gst
+: 1665055668:0;ln -s ~/src/dot_files/irbrc ~/.irbrc 
+: 1665055710:0;cd
+: 1665055715:0;cd src/dot_files
+: 1665055717:0;gst
+: 1665055720:0;git diff
+: 1665055736:0;gst
+: 1665055740:0;git diff aliasrc
+: 1665055748:0;git co aliasrc
+: 1665055770:0;cp ~/.zshrc zshrc_oh_my
+: 1665055778:0;cat zshrc_oh_my
+: 1665055790:0;cat zsh.local
+: 1665055813:0;vim zsh.local
+: 1665055921:0;git diff 
+: 1665055993:0;cp ~/.zsh_history .
+: 1665056971:0;timestamp
+: 1665056978:0;git remote -v
+: 1665056992:0;cat ~/.zsh_history
+: 1665057004:0;cat zsh_history
+: 1665057011:0;r
+: 1665057017:0;gst
+: 1665057027:0;git config --global user.email 'vishnu.sharma@smartpension.co.uk'
+: 1665057036:0;git config --global user.name 'Vishnu Sharma'
+: 1665057046:0;git config user.name 'Vishnu Sharma'
+: 1665057055:0;git config user.email 'vishnu.sharma@smartpension.co.uk'
+: 1665057059:0;gst
+: 1665058243:0;cd Projects/api/
+: 1665058317:0;		docker-compose up mysql redis
+: 1665058369:0;bundle
+: 1665058378:0;be rails s
+: 1665058399:0;vim ~/.zsh.local
+: 1665058419:0;mysql
+: 1665058454:0;be rails s
+: 1665059530:0;be rails c
+: 1665061973:0;be rspec spec/units/adjust_for_fee_charges/
+: 1665117468:0;gst
+: 1665117685:0;gf
+: 1665129442:0;gst
+: 1665129451:0;git stash
+: 1665129454:0;gf
+: 1665129461:0;s gb
+: 1665129476:0;cat .git/config
+: 1665129488:0;git config user.email 'vishnu.sharma@smartpension.co.uk'
+: 1665129494:0;git config user.name 'Vishnu Sharma'
+: 1665129497:0;cat .git/config
+: 1665129506:0;git stash apply
+: 1665129512:0;bundle
+: 1665129528:0;be rspec spec
+: 1665134839:0;brew tap heroku/brew && brew install heroku\
+
+: 1665135858:0;heroku autocomplete --refresh-cache
+: 1665136875:0;be rspec ./spec/lib/pdf_to_text/reader_spec.rb:23
+: 1665136992:0;brew cask install pdftotext
+: 1665137096:0;brew install pdftotext --cask
+: 1665137134:0;brew install pdftotext
+: 1665137174:0;pip3 install pdftotext
+: 1665137500:0;pip3
+: 1665137503:0;pip3 install pdftotext
+: 1665140382:0;be rspec ./spec/units/create_ssif_import/entry_point_spec.rb:80 
+: 1665140585:0;gst
+: 1665140589:0;bundle
+: 1665142212:0;heroku autocomplete --refresh-cache
+: 1665142238:0;heroku autocomplete
+: 1665142256:0;gst
+: 1665143417:0;rm spec/tasks/migrate_3ppp_and_directors_and_bank_account_details_spec.rb
+: 1665143430:0;gst
+: 1665143445:0;rm -rf lib/tasks/migrate_3ppp_and_directors_and_bank_account_details
+: 1665143455:0;gst
+: 1665143480:0;be rspec spec
+: 1665145050:0;gst
+: 1665145321:0;git co -b STAR-1919-Remove-Rake-Task-migrate_3ppp_and_directors_and_bank_account_details
+: 1665146932:0;git diff
+: 1665148952:0;be rspec spec/tasks
+: 1665149386:0;be rspec spec/lib
+: 1665149659:0;be rspec spec/
+: 1665207008:0;gst
+: 1665207023:0;cd 
+: 1665207027:0;cd src/dot_files
+: 1665207030:0;git diff
+: 1665207034:0;gst
+: 1665207043:0;git diff 
+: 1665207089:0;gst
+: 1665207092:0;git add .
+: 1665207094:0;gst
+: 1665207122:0;ls
+: 1665207141:0;cp ~/.zshrc zshrc_oh_my
+: 1665207144:0;gst
+: 1665207157:0;git diff zshrc_oh_my
+: 1665207164:0;gst
+: 1665207166:0;git add .

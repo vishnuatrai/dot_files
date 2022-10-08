@@ -25,8 +25,8 @@
   bra = branch -a
 
 [user]
-	name = Vishnu Atrai
-	email = me@vishnuatrai.com
+	name = Vishnu Sharma
+	email = vishnu.sharma@smartpension.co.uk
 [mergetool "diffmerge"]
 	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
 	trustExitCode = false

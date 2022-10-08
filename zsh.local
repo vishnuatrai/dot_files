@@ -1,27 +1,16 @@
-alias pg.service="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log" #For Mac OSX
-alias filezilla="/usr/local/Caskroom/filezilla/3.32.0/FileZilla.app/Contents/MacOS/filezilla &"
-alias oil="cd /Users/vsharm24/apps/oil"
-alias c360="cd /Users/vsharm24/apps/c360"
-alias ebaas="cd /Users/vsharm24/apps/ebaas"
-alias skwave="cd /Users/vsharm24/apps/shockwave"
+setopt correct
+
+#export REMOTE_GEM_CACHE_PATH=$HOME/.remote-gem-cache
+#export ZSH_HISTORY_PATH=~/src/dot_files/zsh_history
+export HISTFILE=~/src/dot_files/zsh_history
+#export HOMEBREW_SEARCH_CACHE_PATH=$HOME/.homebrew-search-cache
 
 export PATH=/opt/mapr/bin:/opt/mapr/hadoop/hadoop-2.7.0/bin:/opt/mapr/hadoop/hadoop-2.7.0/bin:${PATH}
 export PATH="/usr/local/opt/mongodb@3.6/bin:$PATH"
 
-#export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
-#export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home"
-#export CLASSPATH="$JAVA_HOME/lib"
 export MAPR_HOME="/opt/mapr"
 export PATH="$MAPR_HOME:$PATH"
-#export PATH="$CLASSPATH:$PATH"
-#export GRADLE_HOME="/usr/local/Cellar/gradle/5.5.1/libexec/bin"
-#export PATH="$GRADLE_HOME:$PATH"
-export MAPR_TICKETFILE_LOCATION="/usr/local/src/maprticket_ocf"
-#export MAPR_TICKETFILE_LOCATION="/usr/local/src/maprticket_ocf"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-#export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
-#export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
-#export PKG_CONFIG_PATH="/usr/local/opt/mysql@5.7/lib/pkgconfig"
 
 export PATH="/usr/local/opt/mongodb@3.6/bin:$PATH"
 
@@ -41,3 +30,17 @@ export PATH=$PATH:$GOPATH/bin
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/opt/mysql-client@5.7/bin:$PATH"
 
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
+export JAVA_HOME=$JAVA_8_HOME
+
+export PATH=/usr/local/bin:$PATH:$HOME/bin
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+current
+
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+export PATH="/usr/local/opt/node@12/bin:$PATH"
