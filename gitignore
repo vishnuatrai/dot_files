@@ -14,6 +14,7 @@ jferris-*.gemspec
 .idea/
 .bundle
 .rvmrc
+.nvmrc
 /config/mongoid.yml
 /config/database.yml
 /public/assets/
